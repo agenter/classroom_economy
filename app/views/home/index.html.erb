@@ -1,4 +1,17 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
+
+<% if user_signed_in? %>
+<% if user.has_role? :admin %>
+  <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<% end %>    
+    <% end %>
+<% else %> 
+	<p>Welcome to the Classroom Economy</p>
+	<% end %>
+<% else %>
+	<p>Please log in to continue</p>
+	<% end %>
+
+
+
