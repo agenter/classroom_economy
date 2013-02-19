@@ -1,3 +1,6 @@
 class Account < ActiveRecord::Base
-  attr_accessible :balance, :name
+	belongs_to :user
+	belongs_to :group
+
+  attr_accessible :balance, :user_id, :group_id
 end
