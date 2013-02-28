@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :account do
-    name "MyString"
-    balance 1.5
+    user ""
+    group ""
+    amount 1.5
   end
 end
